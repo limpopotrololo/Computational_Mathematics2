@@ -1,11 +1,13 @@
 import math
-
+from IO_module import input_block
 from IO_module.output_block import output_init
 
 ans = 0
 
 
-def bisection_method(func, a, b, eps):
+def bisection_method(func, row_a, row_b, eps, description):
+    b = row_b
+    a = row_a
     x0 = (a + b) / 2
     n = int(math.log2(abs(a - b) / eps)) + 1
     for i in range(n):
@@ -18,4 +20,4 @@ def bisection_method(func, a, b, eps):
             x0 = (x0 + b) / 2
             a = tmp
     ans = x0
-    output_init(func, a, b, ans)
+    output_init(func, row_a, row_b, ans, description)
