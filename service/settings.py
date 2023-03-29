@@ -16,6 +16,7 @@ global eq2
 global eq3
 global eq4
 
+
 def eq1(x):
     return np.sin(x ** 2 + np.cos(x))
 

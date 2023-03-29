@@ -1,5 +1,4 @@
 import math
-from IO_module import input_block
 from IO_module.output_block import output_init
 
 ans = 0
@@ -19,5 +18,4 @@ def bisection_method(func, row_a, row_b, eps, description):
             tmp = x0
             x0 = (x0 + b) / 2
             a = tmp
-    ans = x0
-    output_init(func, row_a, row_b, ans, description)
+    output_init(func, row_a, row_b, x0, description)

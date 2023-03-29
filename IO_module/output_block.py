@@ -3,14 +3,14 @@ import numpy as np
 
 
 def print_graph(f, a, b, ans, description):
-    x = np.arange(a - 2, b + 2, 0.01)
+    x = np.arange(a - 10, b + 10, 0.01)
     # Вычисляем значения функции  для каждого значения аргумента
     y = []
     for i in x:
         y.append(f(i))
 
     # Создаем объекты Figure и Axes для отображения графика
-    fig, ax = plt.subplots(figsize=(10, 8), dpi=300)
+    fig, ax = plt.subplots(figsize=(3, 2), dpi=300)
     # Отображаем график функции
     ax.plot(x, y, label=description)
     # Устанавливаем границы отображения по осям x и y с запасом
@@ -38,6 +38,8 @@ def print_graph(f, a, b, ans, description):
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     plt.scatter([ans], [0], color="red", linewidths=0.1, zorder=10)
+    plt.ylim([-10, 10])
+    plt.xlim([-10, 10])
     plt.show()
 
 
